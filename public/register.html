@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="info-container">
+                <div id="image-container">
+                    <img id="broad-image" src="images/broad.png">
+                </div>
+                <div id="about-div">
+                    <h1>jambpadi</h1>
+                    <p>Prepare and practice for your next JAMB exam with over <b>10,000</b> questions on this platform.
+                    </p>
+                </div>
+
+            </div>
+            <div id="form-container">
+                <h1 id="welcome">Hello Dear!</h1>
+                <p id="greeting">Fill in your details to get started.</p>
+                <form>
+                    <input type="text" class="input" name="firstName" id="first-name" placeholder="First Name" required><br>
+                    <input type="text" class="input" name="lastName" id="last-name" placeholder="Last Name" required><br>
+                    <input type="email" class="input" name="email" id="email" placeholder="Email address" required><br>
+                <input type="password" class="input" name="password" id="password" placeholder="Password" required><br>
+                <input type="password" class="input" name="password" id="password2" placeholder="Confirm Password" required><br>
+                <div id="forgot-remember">
+                    <p><input type="checkbox" class="checkbox" name="check-me" id="check-me" required>I accept your &nbsp;<a href="#">Terms and Conditions</a></p>
+                </div>
+                </form>
+                <button id="register">Sign Up</button><br>
+                <p>Already have an account? &nbsp;<a href="/login">Sign In</a></p>
+
+            </div>
+        </div>
+       <script>
+
+        const button = document.getElementById('register');
+
+        const buttonInnerHTML = `
+        <div id="circular-indicator">
+        </div>
+        `
+
+        document.getElementById('register').addEventListener('click', async ()=>{
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const email = document.getElementById('email').value;
+            const password1 = document.getElementById('password').value;
+            const password2 = document.getElementById('password2').value;
+            let newPassword = '';
+            button.innerHTML = buttonInnerHTML;
+
+            if (!firstName || !lastName || !email || !password1 || !password2 || password1 === password2) {
+                newPassword = password1;
+                const newUser = {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    password: newPassword
+                }
+
+                try {
+
+                    const response = await fetch('/api/register', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(newUser)
+                    });
+
+                    if (response.ok){
+                        console.log(await response.json())
+                        window.location.href = '/verify-email-otp';
+                    } else {
+                        console.log(await response.json())
+                    }
+
+                } catch(error) {
+                    console.log(error)
+                }
+            } else {
+                console.log('There is an error')
+            }
+
+        });
+       </script>
+    </body>
+</html>

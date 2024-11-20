@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jambpadi Dashboard</title>
+    <link rel="stylesheet" href="/user_dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h1>jambpadi</h1>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#take-test">Take CBT Test</a></li>
+                <li><a href="#review-questions">Review Past Questions</a></li>
+                <li><a href="#take-test">Assignments</a></li>
+                <li><a href="#leaderboard">Leaderboard</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#history">Logout</a></li>
+            </ul>
+           
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h2>Welcome, Kelvin</h2>
+                <div><input type="text" placeholder="search"><button>search</button></div>
+            </header>
+
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section">
+                <h3>Dashboard Overview</h3>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h4>Completed Tests</h4>
+                        <p>15</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Leaderboard Rank</h4>
+                        <p>#10</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Accuracy</h4>
+                        <p>85%</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Take CBT Test -->
+            <section id="take-test" class="content-section">
+                <h3>Take a New CBT Test</h3>
+                <p>Challenge yourself with our simulated JAMB CBT tests.</p>
+                <button class="btn">Start Test</button>
+            </section>
+
+            <!-- Review Past Questions -->
+            <section id="review-questions" class="content-section">
+                <h3>Review Past Questions</h3>
+                <p>Browse through thousands of past questions and answers.</p>
+                <button class="btn">Start Reviewing</button>
+            </section>
+
+            <!-- Leaderboard -->
+            <section id="leaderboard" class="content-section">
+                <h3>Leaderboard</h3>
+                <p>See how you rank against other students.</p>
+                <ul class="leaderboard-list">
+                    <li>#1 - John Doe (98%)</li>
+                    <li>#2 - Jane Smith (95%)</li>
+                    <li>#3 - Alex Johnson (92%)</li>
+                    <!-- Add more entries -->
+                </ul>
+            </section>
+
+            <!-- History -->
+            <section id="history" class="content-section">
+                <h3>Test History</h3>
+                <ul class="history-list">
+                    <li>Test 1 - 85% (Completed on 01/11/2024)</li>
+                    <li>Test 2 - 78% (Completed on 05/11/2024)</li>
+                    <li>Test 3 - 90% (Completed on 10/11/2024)</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

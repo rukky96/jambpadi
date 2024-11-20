@@ -1,0 +1,297 @@
+/* Enterprise Pricing Section */
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    background-color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: #f5f5f5;
+    z-index: 10;
+}
+
+header h1 {
+    color: #37073F;
+    font-size: 40px;
+    margin: 0;
+}
+
+header a {
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+header a.active {
+    color: #37073F;
+    text-decoration: underline;
+}
+
+/* Intro Section */
+#intro {
+    padding-top: 80px;
+    background-color: #37073F;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    color: #f5f5f5;
+    padding-left: 60px;
+    padding-right: 60px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+#extra-content {
+    width: 50%;
+    padding: 50px;
+}
+
+#extra-content h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+#extra-content p {
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+#get-started {
+    padding: 15px;
+    background-color: black;
+    color: #f5f5f5;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 50px;
+    min-width: 300px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#get-started:hover {
+    background-color: #5a0760;
+}
+
+#image-div {
+    width: 50%;
+    text-align: center;
+}
+
+#image1 {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #extra-content, #image-div {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #image1 {
+        width: 80%;
+    }
+}
+
+#enterprise-pricing {
+    background-color: lightgray;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#enterprise-pricing h2 {
+    font-size: 36px;
+    color: #37073F;
+    margin-bottom: 20px;
+}
+
+#enterprise-pricing p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+#pricing-plans {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: #f5f5f5;
+    border: 2px solid #37073F;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.plan h3 {
+    font-size: 24px;
+    color: #37073F;
+    margin-bottom: 10px;
+}
+
+.plan .price {
+    font-size: 28px;
+    color: #5a0760;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.plan .price span {
+    font-size: 16px;
+    color: #555;
+}
+
+.plan p {
+    font-size: 16px;
+    margin: 20px 0;
+    color: #333;
+}
+
+.plan button {
+    padding: 10px 20px;
+    background-color: #37073F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plan button:hover {
+    background-color: #5a0760;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #pricing-plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        width: 80%;
+    }
+}
+
+/* Enterprise Steps Section */
+#enterprise-steps-section {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#enterprise-steps-section h2 {
+    font-size: 36px;
+    color: #37073F;
+    margin-bottom: 20px;
+}
+
+#enterprise-steps-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+#enterprise-steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.enterprise-step {
+    background-color: #f5f5f5;
+    border: 2px solid #37073F;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enterprise-step:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.enterprise-step-icon {
+    background-color: #37073F;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enterprise-step h3 {
+    font-size: 20px;
+    color: #37073F;
+    margin-bottom: 10px;
+}
+
+.enterprise-step p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #enterprise-steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enterprise-step {
+        width: 80%;
+    }
+}
+

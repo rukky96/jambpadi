@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jambpadi Test</title>
+    <link rel="stylesheet" href="/test.css">
+</head>
+<body>
+    <div class="test-container">
+        <!-- Tabs for Subjects -->
+        <div class="tabs">
+            <button class="tab active" data-subject="math">Mathematics</button>
+            <button class="tab" data-subject="english">English</button>
+            <button class="tab" data-subject="biology">Biology</button>
+            <button class="tab" data-subject="chemistry">Chemistry</button>
+        </div>
+
+        <!-- Questions and Options -->
+        <div class="question-area">
+            <div class="question" id="math">
+                <h2>Mathematics Question</h2>
+                <p id="math-question">What is 2 + 2?</p>
+                <ul>
+                    <li><input type="radio" name="math-option" value="A"> A) 3</li>
+                    <li><input type="radio" name="math-option" value="B"> B) 4</li>
+                    <li><input type="radio" name="math-option" value="C"> C) 5</li>
+                    <li><input type="radio" name="math-option" value="D"> D) 6</li>
+                </ul>
+            </div>
+            <div class="question hidden" id="english">
+                <h2>English Question</h2>
+                <p id="english-question">Choose the correct synonym of "happy".</p>
+                <ul>
+                    <li><input type="radio" name="english-option" value="A"> A) Angry</li>
+                    <li><input type="radio" name="english-option" value="B"> B) Sad</li>
+                    <li><input type="radio" name="english-option" value="C"> C) Joyful</li>
+                    <li><input type="radio" name="english-option" value="D"> D) Tired</li>
+                </ul>
+            </div>
+            <div class="question hidden" id="biology">
+                <h2>Biology Question</h2>
+                <p id="biology-question">What is the powerhouse of the cell?</p>
+                <ul>
+                    <li><input type="radio" name="biology-option" value="A"> A) Nucleus</li>
+                    <li><input type="radio" name="biology-option" value="B"> B) Ribosome</li>
+                    <li><input type="radio" name="biology-option" value="C"> C) Mitochondria</li>
+                    <li><input type="radio" name="biology-option" value="D"> D) Chloroplast</li>
+                </ul>
+            </div>
+            <div class="question hidden" id="chemistry">
+                <h2>Chemistry Question</h2>
+                <p id="chemistry-question">What is the chemical symbol for water?</p>
+                <ul>
+                    <li><input type="radio" name="chemistry-option" value="A"> A) CO2</li>
+                    <li><input type="radio" name="chemistry-option" value="B"> B) H2O</li>
+                    <li><input type="radio" name="chemistry-option" value="C"> C) O2</li>
+                    <li><input type="radio" name="chemistry-option" value="D"> D) CH4</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Question Navigation -->
+        <div class="question-nav">
+            <button class="nav-btn" data-question="1">1</button>
+            <button class="nav-btn" data-question="2">2</button>
+            <button class="nav-btn" data-question="3">3</button>
+            <button class="nav-btn" data-question="4">4</button>
+            <button class="nav-btn" data-question="5">5</button>
+            <button class="nav-btn" data-question="6">6</button>
+            <button class="nav-btn" data-question="7">7</button>
+            <button class="nav-btn" data-question="8">8</button>
+            <button class="nav-btn" data-question="9">9</button>
+            <button class="nav-btn" data-question="10">10</button>
+        </div>
+
+        <!-- Floating Submit Button -->
+        <button class="submit-btn">Submit Exam</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelectorAll(".tab");
+            const questions = document.querySelectorAll(".question");
+            const navButtons = document.querySelectorAll(".nav-btn");
+        
+            // Handle tab switching
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", () => {
+                    // Remove active class from all tabs
+                    tabs.forEach((t) => t.classList.remove("active"));
+        
+                    // Add active class to the clicked tab
+                    tab.classList.add("active");
+        
+                    // Show the corresponding question
+                    const subject = tab.dataset.subject;
+                    questions.forEach((q) => {
+                        q.classList.add("hidden");
+                        if (q.id === subject) q.classList.remove("hidden");
+                    });
+                });
+            });
+        
+            // Handle question navigation
+            navButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const questionNumber = button.dataset.question;
+                    const activeTab = document.querySelector(".tab.active").dataset.subject;
+                    const questionText = document.getElementById(`${activeTab}-question`);
+        
+                    // Update question text (mock data, replace with dynamic fetching)
+                    questionText.textContent = `This is question ${questionNumber} for ${activeTab}`;
+                });
+            });
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    height: 100vh;
+}
+
+.test-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px 0;
+    background-color: #37073F;
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab.active {
+    background-color: #5a0760;
+}
+
+.question-area {
+    margin-bottom: 20px;
+}
+
+.question {
+    display: none;
+}
+
+.question h2 {
+    margin-bottom: 10px;
+}
+
+.question ul {
+    list-style: none;
+    padding: 0;
+}
+
+.question ul li {
+    margin-bottom: 10px;
+}
+
+.question.hidden {
+    display: none;
+}
+
+.question:not(.hidden) {
+    display: block;
+}
+
+.question-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-btn {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    background-color: #37073F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav-btn:hover {
+    background-color: #5a0760;
+}
+
+.submit-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #37073F;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+    background-color: #5a0760;
+}
