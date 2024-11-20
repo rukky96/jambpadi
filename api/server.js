@@ -4,6 +4,7 @@ const app = express();
 const router = require("./api");
 const user = require('./user_routes');
 
+const port =  process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
@@ -58,7 +59,7 @@ app.use('/user', user)
 
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Server is running");
 })
 
