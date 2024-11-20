@@ -2,7 +2,8 @@ const express = require('express');
 const path = require("path");
 const app = express();
 const router = require("./api");
-const user = require('./user_routes');
+const dotenv = require("dotenv");
+dotenv.config();
 
 const port =  process.env.PORT || 3000;
 
@@ -55,8 +56,6 @@ app.get('/enterprise', (req, res)=>{
 
 
 app.use('/user', user)
-
-
 
 
 app.listen(port, () => {
