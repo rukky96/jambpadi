@@ -12,10 +12,10 @@ app.use(express.urlencoded({ extended: true}));
 
 app.use('/api', router);
 
-app.use(express.static(path.join(__dirname, "/../public")))
+app.use(express.static(path.join(__dirname, "../public")))
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, "/../public", 'login.html'));
+    res.sendFile(path.join(__dirname, "../public", 'login.html'));
 })
 
 app.get('/register', (req, res) => {
@@ -53,9 +53,6 @@ app.get('/pricing', (req, res)=>{
 app.get('/enterprise', (req, res)=>{
     res.sendFile(path.join(__dirname, "/../public", 'enterprise.html'));
 })
-
-
-app.use('/user', user)
 
 
 app.listen(port, () => {
