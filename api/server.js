@@ -19,39 +19,39 @@ app.get('/login', (req, res) => {
 })
 
 app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, "/../public", 'register.html'));
+    res.sendFile(path.join(__dirname, "../public", 'register.html'));
 })
 
 app.get('/password-reset-email', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '/../public', 'password_reset_email.html'))
+    res.sendFile(path.join(__dirname, '../public', 'password_reset_email.html'))
 })
 
 app.get('/verify-email-otp', (req, res)=>{
-    res.sendFile(path.join(__dirname, "/../public", 'verify_email_otp.html'));
+    res.sendFile(path.join(__dirname, "../public", 'verify_email_otp.html'));
 })
 
 app.get('/reset-password-otp', (req, res)=>{
-    res.sendFile(path.join(__dirname, "/../public", 'reset_password_otp.html'));
+    res.sendFile(path.join(__dirname, "../public", 'reset_password_otp.html'));
 })
 
 app.get('/reset-password', (req, res)=>{
-    res.sendFile(path.join(__dirname, "/../public", 'password_reset.html'));
+    res.sendFile(path.join(__dirname, "../public", 'password_reset.html'));
 })
 
 app.get('', (req, res)=>{
-    res.sendFile(path.join(__dirname, "/../public", 'homepage.html'));
+    res.sendFile(path.join(__dirname, "../public", 'homepage.html'));
 })
 
 app.get('/user/dashboard/test', (req, res)=>{
-    res.sendFile(path.join(__dirname, "/../public", 'test.html'));
+    res.sendFile(path.join(__dirname, "../public", 'test.html'));
 })
 
 app.get('/pricing', (req, res)=>{
-    res.sendFile(path.join(__dirname, "/../public", 'pricing.html'));
+    res.sendFile(path.join(__dirname, "../public", 'pricing.html'));
 })
 
 app.get('/enterprise', (req, res)=>{
-    res.sendFile(path.join(__dirname, "/../public", 'enterprise.html'));
+    res.sendFile(path.join(__dirname, "../public", 'enterprise.html'));
 })
 
 
