@@ -54,6 +54,10 @@ app.get('/enterprise', (req, res)=>{
     res.sendFile(path.join(__dirname, "../public", 'enterprise.html'));
 })
 
+app.get('/user/dashboard', (req, res)=>{
+    res.sendFile(path.join(__dirname, "../public", 'user_dashboard.html'));
+})
+
 
 app.listen(port, () => {
     console.log("Server is running");
