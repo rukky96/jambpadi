@@ -144,6 +144,7 @@ header a::selection {
     margin-top: 50px;
     min-width: 300px;
     border-style: solid;
+    border-color: black;
     border-radius: 20px;
 }
 
