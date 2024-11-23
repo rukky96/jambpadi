@@ -1,20 +1,60 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0px;
     padding: 0px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
+#menu-bar {
+    display: none;
+}
+
+#nav-links {
+    display: block;
+}
+
+#menu-button {
+    all: unset;
+    border-style: solid;
+    border-color: #37073F;
+    color: #37073F;
+    font-weight: bold;
+    font-size: 20px;
+    align-content: center;
+    height: 25px;
+    width: 25px;
+    border-width: 2px;
+    text-align: center;
+    border-radius: 2px;
+    line-height: 1;
+    margin: 0px;
+}
+
+#drawer {
+    padding: 10px;
+    z-index: 1000;
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    height: 100%;
+    width: 250px;
+    display: none;
+    box-shadow: 5px 0 10px #555;
+
+}
+
+#drawer a {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
 
 header {
     position: fixed;
@@ -32,8 +72,8 @@ header {
 }
 
 h1 {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: #37073F;
     font-size: 40px;
@@ -47,11 +87,14 @@ h2 {
 }
 
 #extra-content p {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 header a {
+    padding-left: 20px;
     padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-weight: bold;
     text-decoration: none;
     color: black;
@@ -64,8 +107,8 @@ header a::selection {
 #intro {
     padding-top: 80px;
     background-color: #37073F;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     color: #f5f5f5;
@@ -77,9 +120,11 @@ header a::selection {
 
 }
 
+
+
 #image1 {
-    height: 450px;
-    width: 550px;
+    height: auto;
+    width: 100%;
     border-radius: 20px;
 }
 
@@ -87,18 +132,45 @@ header a::selection {
     padding: 50px;
     width: 50%;
     align-content: center;
+    box-sizing: border-box;
 }
 
 #get-started {
-    padding: 15px;
+    padding: 12px;
     background-color: black;
     color: #f5f5f5;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 50px;
-    min-width: 400px;
+    min-width: 300px;
     border-style: solid;
     border-radius: 20px;
+}
+
+header a.active, #drawer a.active {
+    background-color: #37073F;
+    color: white;
+    border-radius: 5px;
+}
+
+#logo {
+    padding: 0px;
+    color: #37073F;
+    margin-right: 20px;
+}
+
+#nav-links {
+    line-height: 2;
+    text-align: center;
+}
+
+#login {
+    background-color: #37073F;
+    border-radius: 5px;
+    color: #f5f5f5;
+    font-weight: bold;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 
@@ -170,12 +242,66 @@ header a::selection {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+
+    #menu-bar {
+        display: block;
+    }
+    
+    #nav-links {
+        display: none;
+    }
+
+    #logo {
+        font-size: 30px;
+    }
+
     #steps-container {
         flex-direction: column;
         align-items: center;
     }
 
+    #intro {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        min-height: fit-content;
+    }
+    #extra-content, #image-div {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+    }
+
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    
+    h2 {
+        font-size: 28px; /* Smaller font for headings */
+    }
+
+    #extra-content p {
+        font-size: 16px; /* Adjust paragraph text */
+    }
+
+    #get-started {
+        margin-top: 20px;
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    #logo {
+        margin: 10px;
+    }
     .step {
         width: 80%;
     }

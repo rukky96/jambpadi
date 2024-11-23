@@ -7,31 +7,41 @@
     </head>
     <body>
         <header>
+            <div id="menu-bar"><button id="menu-button">&#x2630;</button></div>
             <div>
-                <h1>jambpadi</h1>
+                <h1><a id="logo" href="/">jambpadi</a></h1>
             </div>
-            <div>
-                <a href="">Home</a>
+            <div id="nav-links">
+                <a class='active' href="/" >Home</a>
                 <a href="/pricing">Pricing</a>
                 <a href="/blogs">Blogs</a>
-                <a href="">About Us</a>
-                <a href="">Contact Us</a>
-                <a href ="/enterprise">For Schools/Tutorial Centres</a>
+                <a href="/api-reference">API Reference</a>
+                <a href="/">About</a>
+                <a href ="/enterprise">For Schools</a>
             </div>
 
             <div>
-                <a href="/login">LOGIN</a>
+                <a id="login" href="/login">LOGIN</a>
             </div>
         </header>
+        <div id="drawer">
+            <a class='active' href="/" >Home</a>
+                <a href="/pricing">Pricing</a>
+                <a href="/blogs">Blogs</a>
+                <a href="/api-reference">API Reference</a>
+                <a href="/">About</a>
+                <a href ="/enterprise">For Schools</a>
+
+        </div>
         <div id="intro">
             <div id="extra-content">
                 <h2>
                     The best platform to build exam confidence!
                 </h2>
                 <p>
-                    Prepare and practice with over 10,000 JAMB questions. Engage in interactive learning and gain the confidence to excel in your exams through expertly curated questions and detailed explanations.
+                    Prepare and practice with over <b>10,000</b> JAMB questions. Engage in interactive learning and gain the confidence to excel in your exams through expertly curated questions and detailed explanations.
                 </p>
-                <button id="get-started">Get Started</button>
+                <a href="/register"><button id="get-started">Get Started</button></a>
             </div>
             <div id="image-div">
                 <img  id="image1" src="/images/image.jpg">
@@ -72,5 +82,6 @@
     </div>
 </div>
 
+<script src="/general.js"></script>
     </body>
 </html>
