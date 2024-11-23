@@ -148,6 +148,10 @@ header a::selection {
     border-radius: 20px;
 }
 
+#get-started:hover {
+    background-color: #5a0760;
+}
+
 header a.active, #drawer a.active {
     background-color: #37073F;
     color: white;
@@ -313,6 +317,177 @@ header a.active, #drawer a.active {
     background-color: #f5f5f5;
     height: 100vh;
     width: 100vw;
+}
+
+/* Enterprise Page CSS */
+#enterprise-pricing {
+    background-color: lightgray;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#enterprise-pricing h2 {
+    font-size: 36px;
+    color: #37073F;
+    margin-bottom: 20px;
+}
+
+#enterprise-pricing p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+#pricing-plans {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: #f5f5f5;
+    border: 2px solid #37073F;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.plan h3 {
+    font-size: 24px;
+    color: #37073F;
+    margin-bottom: 10px;
+}
+
+.plan .price {
+    font-size: 28px;
+    color: #5a0760;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.plan .price span {
+    font-size: 16px;
+    color: #555;
+}
+
+.plan p {
+    font-size: 16px;
+    margin: 20px 0;
+    color: #333;
+}
+
+.plan button {
+    padding: 10px 20px;
+    background-color: #37073F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plan button:hover {
+    background-color: #5a0760;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #pricing-plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        width: 80%;
+    }
+}
+
+/* Enterprise Steps Section */
+#enterprise-steps-section {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#enterprise-steps-section h2 {
+    font-size: 36px;
+    color: #37073F;
+    margin-bottom: 20px;
+}
+
+#enterprise-steps-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+#enterprise-steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.enterprise-step {
+    background-color: #f5f5f5;
+    border: 2px solid #37073F;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enterprise-step:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.enterprise-step-icon {
+    background-color: #37073F;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enterprise-step h3 {
+    font-size: 20px;
+    color: #37073F;
+    margin-bottom: 10px;
+}
+
+.enterprise-step p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #enterprise-steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enterprise-step {
+        width: 80%;
+    }
 }
 
 

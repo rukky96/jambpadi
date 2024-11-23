@@ -2,27 +2,38 @@
 <html>
     <head>
         <title>Enterprise | Jambpadi</title>
-        <link rel="stylesheet" href="/enterprise.css">
+        <link rel="stylesheet" href="/homepage.css?v=1.1.2">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <header>
-            <div>
-                <h1>jambpadi</h1>
+            <header>
+                <div id="menu-bar"><button id="menu-button">&#x2630;</button></div>
+                <div>
+                    <h1><a id="logo" href="/">jambpadi</a></h1>
+                </div>
+                <div id="nav-links">
+                    <a href="/" >Home</a>
+                    <a href="/pricing">Pricing</a>
+                    <a href="/blogs">Blogs</a>
+                    <a href="/api-reference">API Reference</a>
+                    <a href="/">About</a>
+                    <a href ="/enterprise" class='active'>For Schools</a>
+                </div>
+    
+                <div>
+                    <a id="login" href="/login">LOGIN</a>
+                </div>
+            </header>
+            <div id="drawer">
+                    <a href="/" >Home</a>
+                    <a href="/pricing">Pricing</a>
+                    <a href="/blogs">Blogs</a>
+                    <a href="/api-reference">API Reference</a>
+                    <a href="/">About</a>
+                    <a href ="/enterprise" class='active'>For Schools</a>
+    
             </div>
-            <div>
-                <a href="/">Home</a>
-                <a href="/pricing">Pricing</a>
-                <a href="/blogs">Blogs</a>
-                <a href="/about">About Us</a>
-                <a href="/contact">Contact Us</a>
-                <a href="/enterprise" class="active">For Schools/Tutorial Centres</a>
-            </div>
-            <div>
-                <a href="/login">LOGIN</a>
-            </div>
-        </header>
-        
+
         <div id="intro">
             <div id="extra-content">
                 <h2>
@@ -102,5 +113,6 @@
             </div>
         </div>
         
+        <script src="/general.js"></script>
     </body>
 </html>
