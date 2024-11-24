@@ -32,6 +32,9 @@ body {
     border-width: 2px;
     text-align: center;
     border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     line-height: 1;
     margin: 0px;
     box-sizing: border-box;
