@@ -66,6 +66,14 @@ app.get('/blogs', (req, res)=>{
     res.sendFile(path.join(__dirname, "../public", 'blogs.html'));
 })
 
+app.get('/about', (req, res)=>{
+    res.sendFile(path.join(__dirname, "../public", 'about.html'));
+})
+
+app.get('/api-reference', (req, res)=>{
+    res.sendFile(path.join(__dirname, "../public", 'api_reference.html'));
+})
+
 
 app.listen(port, () => {
     console.log("Server is running");
